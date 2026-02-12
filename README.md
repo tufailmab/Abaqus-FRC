@@ -43,8 +43,7 @@
   </ul>
 
   <h2>License</h2>
-  <p>This project is licensed under the <strong>MIT License</strong>.</p>
-  <p>You are free to use, modify, and distribute these CAD models under the terms of the MIT License. Please provide proper credit if you use these specimens in your work.</p>
+  <p>This project is licensed under the <strong>MIT License</strong>. You are free to use, modify, and distribute these CAD models under the terms of the MIT License. Please provide proper credit if you use these specimens in your work.</p>
 
   <h2>Developer Information</h2>
   <ul>
