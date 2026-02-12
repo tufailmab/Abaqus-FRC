@@ -5,7 +5,7 @@
 <body>
   <h1>Abaqus-FRC: CAD Specimens for Fiber-Reinforced Composites</h1>
 
-  <p>This repository contains some of the CAD models representing fiber-reinforced composite (FRC) specimens. The models are generated using <strong>visual programming</strong> and exported in <code>.iges</code> format, compatible with Abaqus and other CAD/CAE software.
+  <p>This repository contains some of the CAD files representing fiber-reinforced composite (FRC) specimens. These files are generated using <strong>visual programming</strong> or <strong>Python Scripting</strong> and exported in <code>.iges</code> format, compatible with Abaqus and other CAD/CAE software.
   All lectures (not about generating these files, but focuses on modeling and simulating fiber-reinforced concrete in ABAQUS, such as working with them after importing into the software) are publicly available in the following YouTube playlist:
   </p> 
   <div style="margin: 1.5em 0; text-align: center;">
