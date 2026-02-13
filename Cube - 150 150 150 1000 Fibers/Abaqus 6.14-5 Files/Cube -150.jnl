@@ -1,0 +1,35 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.openIges(
+    'C:/Users/Tufail Mabood/Desktop/Testing Under Extreme Disturbance/Deformed Fibers - 1000.igs'
+    , msbo=False, scaleFromFile=OFF, topology=WIRE, trimCurve=DEFAULT)
+mdb.models['Model-1'].PartFromGeometryFile(combine=False, convertToAnalytical=1
+    , dimensionality=THREE_D, geometryFile=mdb.acis, name=
+    'Deformed Fibers - 1000', stitchEdges=1, stitchTolerance=1.0, topology=WIRE
+    , type=DEFORMABLE_BODY)
+mdb.openIges(
+    'C:/Users/Tufail Mabood/Desktop/Testing Under Extreme Disturbance/Cube - 150 150 150.igs'
+    , msbo=False, scaleFromFile=OFF, trimCurve=DEFAULT)
+mdb.models['Model-1'].PartFromGeometryFile(combine=False, convertToAnalytical=1
+    , dimensionality=THREE_D, geometryFile=mdb.acis, name='Cube - 150 150 150', 
+    stitchEdges=1, stitchTolerance=1.0, type=DEFORMABLE_BODY)
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=OFF, name=
+    'Cube - 150 150 150-1', part=
+    mdb.models['Model-1'].parts['Cube - 150 150 150'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=OFF, name=
+    'Deformed Fibers - 1000-1', part=
+    mdb.models['Model-1'].parts['Deformed Fibers - 1000'])
+# Save by Tufail Mabood on 2026_02_13-08.46.17; build 6.14-1 2014_06_04-15.11.02 134264
