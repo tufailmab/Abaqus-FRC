@@ -1,0 +1,8 @@
+L (m) = 10
+W (m) = 150
+D (m) = 150
+Target Length (m) = 50
+Criteria for Setting Length = 500
+Fiber Counts = 1000
+Minimum Distance Between Fibers = 1
+Total Length of Cutted Fibers (mm) = 21221.821576

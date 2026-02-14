@@ -1,0 +1,33 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.openIges(
+    'C:/Users/Tufail Mabood/Desktop/FiberPacking ExtremeCases/RnD 1/RnD 1-Box.igs'
+    , msbo=False, scaleFromFile=OFF, trimCurve=DEFAULT)
+mdb.models['Model-1'].PartFromGeometryFile(combine=False, convertToAnalytical=1
+    , dimensionality=THREE_D, geometryFile=mdb.acis, name='RnD 1-Box', 
+    stitchEdges=1, stitchTolerance=1.0, type=DEFORMABLE_BODY)
+mdb.openIges(
+    'C:/Users/Tufail Mabood/Desktop/FiberPacking ExtremeCases/RnD 1/RnD 1-Fibers.igs'
+    , msbo=False, scaleFromFile=OFF, topology=WIRE, trimCurve=DEFAULT)
+mdb.models['Model-1'].PartFromGeometryFile(combine=False, convertToAnalytical=1
+    , dimensionality=THREE_D, geometryFile=mdb.acis, name='RnD 1-Fibers', 
+    stitchEdges=1, stitchTolerance=1.0, topology=WIRE, type=DEFORMABLE_BODY)
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=OFF, name='RnD 1-Box-1', 
+    part=mdb.models['Model-1'].parts['RnD 1-Box'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=OFF, name=
+    'RnD 1-Fibers-1', part=mdb.models['Model-1'].parts['RnD 1-Fibers'])
+# Save by Tufail Mabood on 2026_02_13-21.53.37; build 6.14-1 2014_06_04-15.11.02 134264
+# Save by Tufail Mabood on 2026_02_13-21.54.22; build 6.14-1 2014_06_04-15.11.02 134264

@@ -1,0 +1,1 @@
+For RnD1 and RnD2, I advanced the coding by introducing highly exaggerated curves. The results clearly show that the algorithm works perfectly. However, because the code attempts to place fibers with full 360-degree random rotation, very long and large curves become increasingly difficult to position.
